@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { from } from 'rxjs';
+import { ConfigService } from './config.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { from } from 'rxjs';
     UpdateComponent  ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -47,7 +49,7 @@ import { from } from 'rxjs';
     HttpClientModule,
     
   ],
-  providers: [],
+  providers: [ConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

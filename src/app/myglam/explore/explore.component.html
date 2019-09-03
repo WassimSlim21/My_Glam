@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <h2 class="text-danger mt-0">
+                <h2 class="text-da--nger mt-0">
                     EXPLORE OUR SERVICES
                 </h2>
                 <hr class="divider danger my-3 px-5">
@@ -18,108 +18,28 @@
                             <a class="btn-floating btnr" href="#multi-item-example" data-slide="prev"><img id="bt1" src="assets/images/arrow_left_inactif@2x.png"/></a>
                             <a class="btn-floating btnf" href="#multi-item-example" data-slide="next"><img id="bt2" src="assets/images/arrow_right_inactif@2x.png"/></a>
                           <!--/.Controls-->
-                          <!--Indicators
-                          <ol class="carousel-indicators">
-                            <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                            <li data-target="#multi-item-example" data-slide-to="1"></li>
-                            <li data-target="#multi-item-example" data-slide-to="2"></li>
-                          </ol>
-                       /.Indicators-->
-                    
                           <!--Slides-->
-                          <div class="carousel-inner" role="listbox">
-                    
-                            <!--First slide-->
-                            <div class="carousel-item active">
-                    
-                              <div class="row">
-                                <div class="col-md-4">
-                                  <div class="card mb-2">
-                                    <img class="card-img-top" src="assets/images/categ_lashes_home@2x.png"
-                                      alt="Card image cap">
-                                    <div class="card-body">
-                                            <hr class="divider danger my-2">
-                                      <h4 class="card-title">Lashes & bows</h4>
-                                      <p class="card-text ct">-Event makeup<br>-Make up workshop<br>-Makeup with test<br>-Nude makeup<br>-Fashion makeup<br>-Our make up artists</p>
-                                    </div>
-                                  </div>
-                                </div>
-                    
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                  <div class="card mb-2">
-                                    <img class="card-img-top" src="assets/images/categ_nails_home@1x.png"
-                                      alt="Card image cap">
-                                    <div class="card-body">
-                                            <hr class="divider danger my-2">
-                                      <h4 class="card-title">Nails & more</h4>
-                                      <p class="card-text ct">-Event makeup<br>-Make up workshop<br>-Makeup with test<br>-Nude makeup<br>-Fashion makeup<br>-Our make up artists</p>
-                                    </div>
-                                  </div>
-                                </div>
-                    
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                  <div class="card mb-2">
-                                    <img class="card-img-top" src="assets/images/categ_haire_style_home@2x.png"
-                                      alt="Card image cap">
-                                    <div class="card-body">
-                                            <hr class="divider danger my-2">
-                                      <h4 class="card-title">Haire style</h4>
-                                      <p class="card-text ct">-Event makeup<br>-Make up workshop<br>-Makeup with test<br>-Nude makeup<br>-Fashion makeup<br>-Our make up artists
-                                     </p>
-                                    </div>
+                          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner row w-100 mx-auto">
+                              <div class="carousel-item col-md-4 active"*ngFor="let x of categories; let isFirst = first"  [class.active]="isFirst">
+                                <div class="card">
+                                  <img class="card-img-top img-fluid" src="http://{{x.imagePath}}" alt="Card image cap">
+                                  <div class="card-body">
+                                    <hr class="divider danger my-2">
+                                    <h4 class="card-title">{{x.label}}</h4>
+                                    <p class="card-text ct">{{x.description}}</p>
                                   </div>
                                 </div>
                               </div>
-                    
                             </div>
-                            <!--/.First slide-->
-                    
-                            <!--Second slide-->
-                            <div class="carousel-item">
-                    
-                              <div class="row">
-                                <div class="col-md-4">
-                                  <div class="card mb-2">
-                                    <img class="card-img-top" src="assets/images/categ_make_up_home@1x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                            <hr class="divider danger my-2">
-                                      <h4 class="card-title">Make up</h4>
-                                      <p class="card-text ct">-Event makeup<br>-Make up workshop<br>-Makeup with test<br>-Nude makeup<br>-Fashion makeup<br>-Our make up artists</p>
-                                    </div>
-                                  </div>
-                                </div>
-                    
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                  <div class="card mb-2">
-                                    <img class="card-img-top" src="assets/images/categ_wax_home@1x.png"
-                                      alt="Card image cap">
-                                    <div class="card-body">
-                                            <hr class="divider danger my-2">
-                                      <h4 class="card-title">Wax & home</h4>
-                                      <p class="card-text ct">
-                                            -Event makeup<br>-Make up workshop<br>-Makeup with test<br>-Nude makeup<br>-Fashion makeup<br>-Our make up artists
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                    
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                  <div class="card mb-2">
-                                    <img class="card-img-top" src="assets/images/categ_goming_soon_home@2x.png"
-                                      alt="Card image cap">
-                                    <div class="card-body">
-                                            <hr class="divider danger my-2">
-                                      <h4 class="card-title">Goming soon</h4>
-                                      <p class="card-text ct">-Event makeup<br>-Make up workshop<br>-Makeup with test<br>-Nude makeup<br>-Fashion makeup<br>-Our make up artists</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                    
-                            </div>
-                            <!--/.Second slide-->
-                    
-                           
+                            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
                           </div>
                           <!--/.Slides-->
                     
